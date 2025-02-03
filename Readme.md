@@ -37,7 +37,7 @@ uvicorn main:app --reload
 ### ENDPINTS
 #### ENDPOINT URL
 ```sh
-https://hng-1-production-e822.up.railway.app/api/classify-number?number=<your number>
+
 ```
 
 #### METHOD:
