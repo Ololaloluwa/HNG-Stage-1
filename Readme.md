@@ -41,18 +41,25 @@ https://hng-1-production-e822.up.railway.app/api/classify-number?number=<your nu
 ```
 
 #### METHOD:
+ ```sh
  GET
+ ```
 #### QUERY PARAMETER:
-number (str): The number to classify.
+```sh
+'number(str)': The number to classify.
+```
 #### RESPONSE:
-number (int): The input number.
-is_prime (bool): Whether the number is prime.
-is_perfect (bool): Whether the number is a perfect square.
-properties (list): Additional properties of the number.
-digit_sum (int): The sum of the digits of the number.
-fun_fact (str): A fun fact about the number.
-error (bool): Indicates if there was an error with the input.
+```sh
+'number (int)': The input number.
+'is_prime (bool)': Whether the number is prime.
+'is_perfect (bool)': Whether the number is a perfect square.
+'properties (list)': Additional properties of the number.
+'digit_sum (int)': The sum of the digits of the number.
+'fun_fact (str)': A fun fact about the number.
+'error (bool)': Indicates if there was an error with the input.
+```
 #### EXAMPLE RESPONSE
+```sh
 {
     "number": 371,
     "is_prime": false,
@@ -61,3 +68,4 @@ error (bool): Indicates if there was an error with the input.
     "digit_sum": 11,  // sum of its digits
     "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371" //gotten from the numbers API
 }
+```
