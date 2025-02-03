@@ -1,5 +1,4 @@
 from fastapi import FastAPI, Query,status
-import httpx,math
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 from functions import is_prime, is_perfect, properties, digit_sum,integer
@@ -26,7 +25,13 @@ async def classify_number(number: str = Query(..., description="Enter an integer
     try:
         
         num = int(number)
+        
+    except ValueError:
         return {
+            "number": number,
+            "error": True
+        }
+    return {
             "number": integer(num),
             "is_prime": is_prime(num),
             "is_perfect": is_perfect(num),
@@ -34,8 +39,3 @@ async def classify_number(number: str = Query(..., description="Enter an integer
             "digit_sum": digit_sum(num),
             "fun_fact": get_fun_fact(num),
          }
-    except ValueError:
-        return {
-            "number": number,
-            "error": True
-        }

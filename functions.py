@@ -14,8 +14,8 @@ def is_prime(value):
 def is_perfect(value):
     if value < 0:
         return False
-    sqaure_rootn = math.sqrt(value)
-    pefect_val = sqaure_rootn.is_integer()
+    sqaure_root= math.sqrt(value)
+    pefect_val = sqaure_root.is_integer()
     return pefect_val
 
 def is_Armstrong(value):
