@@ -20,9 +20,8 @@ def get_fun_fact(value:int):
     url = f"http://numbersapi.com/{value}/math"
     response = requests.get(url)
     return response.text if response.status_code == 200 else "No fun fact available"
+
 @app.get("/api/classify-number")
-
-
 async def classify_number(number: str = Query(..., description="Enter an integer number")):
     try:
         
